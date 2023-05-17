@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Nordique Pro Bold";
+  font-weight: 900;
+  src: url("../src/assets/fonts/FontsFree-Net-Nordique-Pro-Bold.ttf");
+}
+@font-face {
+  font-family: "Nordique Pro Bold";
+  font-weight: 400;
+  src: url("../src/assets/fonts/NordiquePro-Regular.ttf");
+}
