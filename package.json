@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@hookform/error-message": "^2.0.1",
+    "@tailwindcss/forms": "^0.5.3",
+    "@types/react-modal": "^3.16.0",
     "ag-grid-community": "^27.0.1",
     "ag-grid-react": "^27.0.1",
     "axios": "^0.26.1",
@@ -17,6 +19,7 @@
     "react-dom": "^17.0.2",
     "react-dropzone": "^14.2.3",
     "react-hook-form": "^7.32.1",
+    "react-modal": "^3.16.1",
     "react-query": "^3.34.16",
     "react-router-dom": "^6.2.2",
     "react-toastify": "^8.2.0",

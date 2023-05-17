@@ -1,4 +1,6 @@
 import axios, { AxiosResponse } from "axios";
+import moment from "moment";
+import { TaxInfo } from "../Models/api";
 import { CreateReportApiModel, Summary } from "../Models/reports";
 import { User, UserAuth } from "../Models/users";
 
@@ -67,14 +69,35 @@ export const handleUploadCsvReport = async (
   }
 };
 
-export const handlePnrUpload = async (data: any): Promise<AxiosResponse> => {
+export const handlePnrUpload = async (data: {
+  forDate: string;
+  payExcise: boolean;
+  payWHT: boolean;
+}): Promise<AxiosResponse> => {
   try {
     let res = await axios({
-      url: "http://taxpay.kwikbet.co.ke/api/v1.0/payment/initiate",
+      url: "http://134.209.208.164:8080/v1/pay-tax",
       data: data,
     });
 
     return res;
+  } catch (error: unknown) {
+    throw error;
+  }
+};
+
+export const handleGetPnrStatus = async (
+  data: string | undefined
+): Promise<TaxInfo> => {
+  try {
+    let res = await axios.request<TaxInfo>({
+      url: `http://134.209.208.164:8080/v1/tax-info?forDate=${
+        data || moment().subtract(1, "days").format("DD-MM-YYYY")
+      }`,
+      data: data,
+    });
+
+    return res.data;
   } catch (error: unknown) {
     throw error;
   }
