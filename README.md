@@ -7,7 +7,7 @@ This repository contains a React application built using Vite. It provides a mod
 1. Node - 16 is ideal
 2. yarn - It can be installed by running the following command:
 
-````npm install yarn -- global
+```npm install yarn -- global
 
 ```
 
@@ -68,6 +68,4 @@ Replace your-domain.com with your domain or IP address, and /path/to/your/dist-f
 
 4. Restart Nginx
 
-Your React application will now be accessible on your virtual machine using the configured domain or IP address.
-
-````
+Your React application will now be accessible on your virtual machine using the configured domain or IP address
