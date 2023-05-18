@@ -7,8 +7,8 @@ This repository contains a React application built using Vite. It provides a mod
 1. Node - 16 is ideal
 2. yarn - It can be installed by running the following command:
 
-```npm install yarn -- global
-
+```
+npm install yarn -- global
 ```
 
 ## Installation
@@ -17,7 +17,6 @@ To run this application locally, follow these steps:
 
 1. ```
    yarn install
-
    ```
 
 - This will ensure all app dependencies will be installed
@@ -38,7 +37,6 @@ To build the application for production, run the following command:
 
 ```
 yarn build
-
 ```
 
 This will generate a production-ready build of your application in the dist directory.
