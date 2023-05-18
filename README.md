@@ -2,6 +2,15 @@
 
 This repository contains a React application built using Vite. It provides a modern and efficient development environment for creating React projects
 
+## Additional Dependancies
+
+1. Node - 16 is ideal
+2. yarn - It can be installed by running the following command
+
+````
+npm install yarn -- global
+```
+
 ## Installation
 
 To run this application locally, follow these steps:
@@ -27,7 +36,8 @@ This will start the development server and open the application in your default 
 
 To build the application for production, run the following command:
 
-```yarn build
+```
+yarn build
 
 ```
 
@@ -59,3 +69,4 @@ Replace your-domain.com with your domain or IP address, and /path/to/your/dist-f
 4. Restart Nginx
 
 Your React application will now be accessible on your virtual machine using the configured domain or IP address.
+````
