@@ -6,7 +6,7 @@ import { User, UserAuth } from "../Models/users";
 
 let base_url: string = `${import.meta.env.VITE_APP_API_URL}`;
 
-axios.defaults.baseURL = "https://backend.kwikbet.co.ke/api";
+axios.defaults.baseURL = "http://134.209.208.164:8080/v1";
 
 export const handleGetData = async (): Promise<Summary> => {
   let response = await axios({
@@ -56,7 +56,7 @@ export const handleUploadCsvReport = async (
   try {
     let resp = await axios({
       method: "POST",
-      url: "http://134.209.208.164:8080/v1/upload-bets",
+      url: "/upload-bets",
       data: data,
       headers: {
         "Content-Type": "multipart/form-data",
@@ -76,7 +76,7 @@ export const handlePnrUpload = async (data: {
 }): Promise<AxiosResponse> => {
   try {
     let res = await axios({
-      url: "http://134.209.208.164:8080/v1/pay-tax",
+      url: "/pay-tax",
       data: data,
     });
 
@@ -91,7 +91,7 @@ export const handleGetPnrStatus = async (
 ): Promise<TaxInfo> => {
   try {
     let res = await axios.request<TaxInfo>({
-      url: `http://134.209.208.164:8080/v1/tax-info?forDate=${
+      url: `/tax-info?forDate=${
         data || moment().subtract(1, "days").format("DD-MM-YYYY")
       }`,
       data: data,
