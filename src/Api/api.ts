@@ -4,9 +4,9 @@ import { TaxInfo } from "../Models/api";
 import { CreateReportApiModel, Summary } from "../Models/reports";
 import { User, UserAuth } from "../Models/users";
 
-let base_url: string = `${import.meta.env.VITE_APP_API_URL}`;
+let baseURL: string = `${import.meta.env.VITE_APP_API_URL}`;
 
-axios.defaults.baseURL = "http://change.com/v1";
+axios.defaults.baseURL = `http://${baseURL}/v1`;
 
 export const handleGetData = async (): Promise<Summary> => {
   let response = await axios({
