@@ -6,7 +6,7 @@ import { User, UserAuth } from "../Models/users";
 
 let baseURL: string = `${import.meta.env.VITE_APP_API_URL}`;
 
-axios.defaults.baseURL = `http://${baseURL}/v1`;
+axios.defaults.baseURL = `${baseURL}/v1`;
 
 export const handleGetData = async (): Promise<Summary> => {
   let response = await axios({

@@ -11,6 +11,8 @@ This repository contains a React application built using Vite. It provides a mod
 npm install yarn -- global
 ```
 
+3. Create a .env file and place it at the root of the project folder and add a variable named: VITE_APP_API_URL. This
+is the env variable for the api 
 ## Installation
 
 To run this application locally, follow these steps:
