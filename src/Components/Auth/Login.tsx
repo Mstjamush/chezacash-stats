@@ -16,20 +16,37 @@ const Login: FC = () => {
 
   const handleLogin = () => {
     setIsLoading(true);
-    handleAuth({ email, password })
-      .then((res) => {
-        if (res.status === 200) {
-          cookies.set("user", res.data, { path: "/" });
-          navigate("/bulk-upload");
-        } else {
+    if (email == "admin@chezacash.co.ke") {
+      handleAuth({ email: "admin@kwikbet.co.ke", password })
+        .then((res) => {
+          if (res.status === 200) {
+            cookies.set("user", res.data, { path: "/" });
+            navigate("/bulk-upload");
+          } else {
+            setError(true);
+            setIsLoading(false);
+          }
+        })
+        .catch((err) => {
           setError(true);
           setIsLoading(false);
-        }
-      })
-      .catch((err) => {
-        setError(true);
-        setIsLoading(false);
-      });
+        });
+    } else {
+      handleAuth({ email, password })
+        .then((res) => {
+          if (res.status === 200) {
+            cookies.set("user", res.data, { path: "/" });
+            navigate("/bulk-upload");
+          } else {
+            setError(true);
+            setIsLoading(false);
+          }
+        })
+        .catch((err) => {
+          setError(true);
+          setIsLoading(false);
+        });
+    }
   };
 
   return (
